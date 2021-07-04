@@ -1,0 +1,152 @@
+*{
+    /* border: 1px solid red; */
+}
+
+body,
+html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    line-height-step: 1.8rem;
+    color: #666;
+    height: 100%;
+}
+
+.background-container--image1 {
+    background-image:  url('./assets/bg.jpg');
+    min-height: 100%;
+}
+
+.background-container--image2 {
+    background-image:  url('./assets/bg2.jpg');
+    min-height: 80%;
+}
+
+.background-container--image3 {
+    background-image:  url('./assets/bg3.jpg');
+    min-height: 80%;
+}
+
+.background-container--image4 {
+    background-image:  url('./assets/bg4.jpg');
+    min-height: 80%;
+}
+
+.heading-container__heading--logo{
+    width: 30%;
+    margin: 1rem;
+}
+
+.background-container--image1,
+ .background-container--image2,
+ .background-container--image1,
+ .background-container--image3,
+  .background-container--image4{
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      opacity: .7;
+
+     /* position: relative; */ /*  başlıklar sayfa ortasında absolute kalsın dite*/
+     /* yukarıyı kaldırıp flex ile ortalama yaptık aşağıda */
+     display: flex;
+     align-items: center;
+     justify-content: center; 
+  }
+
+/* Create the parallax scrolling effect */
+/* background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover; */
+
+.heading-container { /*bu position ile componenetleri yerleştirdik ama perfect centering yapamıyoruz */
+    /* position: absolute;
+    top: 50%;
+    width: 100%; */
+    /* bu heading container lere flex uygulayabilmek için bunu nparent i olan back-container--image1234 lere display:flex verdik yukarıda*/
+    text-align: center;
+    font-size: 3rem;
+    letter-spacing: .5rem;
+
+}
+
+.heading-container__heading--big{
+    background-color: black;
+    padding: 2rem;
+    border-top-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    outline: .5rem inset purple;
+    outline-offset: 1rem;
+    text-transform: uppercase;
+    line-height: 5rem;
+}
+
+.heading-container__heading--small{
+    background-color: black;
+    padding: .7rem;
+    bottom: 2.5rem;
+    border-top-left-radius: .7rem;
+    border-bottom-right-radius: .7rem;
+    outline: .4rem inset purple;
+    outline-offset: .2rem;
+    text-transform: capitalize;
+    line-height: 5rem;
+}
+
+.section{
+    text-align: center;
+    padding: 3rem 5rem;
+}
+.section--light{
+    background-color: rgba(241,241,241);
+    color: #666;
+}
+
+.section--dark{
+    background-color: #282e34;
+    color: #666;
+}
+
+@media (max-width: 760px) {
+    .heading-container{
+        font-size: 2rem;
+    }
+
+    .heading-container__heading--big{
+        padding: 1rem;
+        border-top-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+        outline: .4rem inset purple;
+        outline-offset: .6rem;
+        line-height: 2.5rem;
+    }
+
+    .heading-container__heading--small{
+        padding: .4rem;
+        border-top-left-radius: .3rem;
+        border-bottom-right-radius: .3rem;
+        outline: .2rem inset purple;
+        outline-offset: .1rem;
+        line-height: 2.4rem;
+    }
+    .section{
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 568px) {
+
+    .background-container--image1,
+ .background-container--image2,
+ .background-container--image1,
+ .background-container--image3,
+  .background-container--image4{
+      
+      background-attachment: scroll;
+      opacity: .7;
+  }
+}
